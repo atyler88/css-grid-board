@@ -49,7 +49,7 @@ body, html {
     font-size: 10px;
     background-image: linear-gradient(240deg, beige,beige);   
     box-shadow: 1px 1px rgb(101, 131, 131);
-    margin: .5fr;
+    margin: 0px;
     z-index: 4;
 }
 .port{
