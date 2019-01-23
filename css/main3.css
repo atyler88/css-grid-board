@@ -1,0 +1,973 @@
+body, html {
+    margin: 0;
+    font-family: 'Arial';
+    font-size: 7px;
+    text-align: center;
+    align-items: center;
+
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 3fr 1fr;
+    /* overflow-y:auto; */
+}
+.board {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr;
+    grid-template-rows:  .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr;
+    background-image: linear-gradient(240deg, beige,beige);   
+}
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr ;
+    /* overflow-y:scroll; */
+}
+.dice{
+    background: whitesmoke;
+    border-style: solid;
+    border-color: black;
+    font-family: 'Arial';
+    font-size: 15px;
+}
+.house{
+    background: rgb(150, 150, 150);
+    margin: 0px;
+    z-index: 3;
+
+}
+.road{
+    background:lightgray;
+    margin: 0px;
+}
+.tile{
+    display: grid;
+    grid-auto-rows: 1fr 1fr 1fr;
+    font-family: 'Arial';
+    font-size: 10px;
+    background-image: linear-gradient(240deg, beige,beige);   
+    box-shadow: 1px 1px rgb(101, 131, 131);
+    margin: .5fr;
+    z-index: 4;
+}
+.port{
+    font-family: 'Arial';
+    font-size: 10px;
+    background: rgb(194, 253, 253);
+    z-index: 4;
+}
+.port1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4; 
+}
+.port2{
+    grid-column-start: 20;
+    grid-column-end: 22;
+    grid-row-start: 4; 
+}
+.port3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8; 
+}
+.port4{
+    grid-column-start: 20;
+    grid-column-end: 22;
+    grid-row-start: 8; 
+}
+.house1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1; 
+}
+.house2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+.house3{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1; 
+}
+.house4{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 1; 
+}
+.house5{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 1; 
+}
+.house6{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 1; 
+}
+.house7{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 1; 
+}
+.house8{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 1; 
+}
+.house9{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 1; 
+}
+.house10{
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 1; 
+}
+.house11{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 1; 
+}
+.house12{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3; 
+}
+.house13{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3; 
+}
+.house14{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3; 
+}
+.house15{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 3; 
+}
+.house16{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 3; 
+}
+.house17{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 3; 
+}
+.house18{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 3; 
+}
+.house19{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 3; 
+}
+.house20{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 3; 
+}
+.house21{
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 3; 
+}
+.house22{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 3; 
+}
+.house23{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5; 
+}
+.house24{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5; 
+}
+.house25{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 5; 
+}
+.house26{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 5; 
+}
+.house27{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 5; 
+}
+.house28{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 5; 
+}
+.house29{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 5; 
+}
+.house30{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 5; 
+}
+.house31{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 5; 
+}
+.house32{
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 5; 
+}
+.house33{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 5; 
+}
+.house34{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7; 
+}
+.house35{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7; 
+}
+.house36{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 7; 
+}
+.house37{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 7; 
+}
+.house38{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 7; 
+}
+.house39{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 7; 
+}
+.house40{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 7; 
+}
+.house41{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 7; 
+}
+.house42{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 7; 
+}
+.house43{
+
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 7;
+}
+.house44{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 7; 
+}
+.house45{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9; 
+}
+.house46{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 9; 
+}
+.house47{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 9; 
+}
+.house48{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 9; 
+}
+.house49{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 9; 
+}
+.house50{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 9; 
+}
+.house51{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 9; 
+}
+.house52{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 9; 
+}
+.house53{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 9; 
+}
+.house54{
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 9; 
+}
+.house55{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 9; 
+}
+.house56{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 11; 
+}
+.house57{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 11; 
+}
+.house58{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 11; 
+}
+.house59{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 11; 
+}
+.house60{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 11; 
+}
+.house61{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 11; 
+}
+.house62{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 11; 
+}
+.house63{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 11; 
+}
+.house64{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 11; 
+}
+.house65{
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 11; 
+}
+.house66{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 11; 
+}
+.road1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1; 
+}
+.road2{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1; 
+}
+.road3{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1; 
+}
+.road4{
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 1; 
+}
+.road5{
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 1; 
+}
+.road6{
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 1; 
+}
+.road7{
+    grid-column-start: 14;
+    grid-column-end: 15;
+    grid-row-start: 1; 
+}
+.road8{
+    grid-column-start: 16;
+    grid-column-end: 17;
+    grid-row-start: 1; 
+}
+.road9{
+    grid-column-start: 18;
+    grid-column-end: 19;
+    grid-row-start: 1; 
+}
+.road10{
+    grid-column-start: 20;
+    grid-column-end: 21;
+    grid-row-start: 1; 
+}
+.road11{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2; 
+}
+.road12{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2; 
+}
+.road13{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 2; 
+}
+.road14{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 2; 
+}
+.road15{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 2; 
+}
+.road16{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 2; 
+}
+.road17{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3; 
+}
+.road18{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3; 
+}
+.road19{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 3; 
+}
+.road20{
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 3; 
+}
+.road21{    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 3; 
+}
+.road22{
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 3; 
+}
+.road23{    
+    grid-column-start: 14;
+    grid-column-end: 15;
+    grid-row-start: 3; 
+}
+.road24{
+    grid-column-start: 16;
+    grid-column-end: 17;
+    grid-row-start: 3; 
+}
+.road25{
+    grid-column-start: 18;
+    grid-column-end: 19;
+    grid-row-start: 3; 
+}
+
+.road26{
+    grid-column-start: 20;
+    grid-column-end: 21;
+    grid-row-start: 3; 
+}
+.road27{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4; 
+}
+.road28{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 4; 
+}
+.road29{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 4; 
+}
+.road29{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 4; 
+}
+.road30{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 4; 
+}
+.road31{
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 4; 
+}
+.road32{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5; 
+}
+.road33{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 5; 
+}
+.road34{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 5; 
+}
+.road35{
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 5; 
+}
+.road36{
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 5; 
+}
+.road37{
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 5; 
+}
+.road38{
+    grid-column-start: 14;
+    grid-column-end: 15;
+    grid-row-start: 5; 
+}
+.road39{
+    grid-column-start: 16;
+    grid-column-end: 17;
+    grid-row-start: 5; 
+}
+.road40{
+    grid-column-start: 18;
+    grid-column-end: 19;
+    grid-row-start: 5; 
+}
+.road41{
+    grid-column-start: 20;
+    grid-column-end: 21;
+    grid-row-start: 5; 
+}
+.road42{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6; 
+}
+.road43{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 6; 
+}
+.road44{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 6; 
+}
+.road45{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 6; 
+}
+.road46{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 6; 
+}
+.road47{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 6; 
+}
+.road48{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7; 
+}
+.road49{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 7; 
+}
+.road50{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 7; 
+}
+.road51{
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 7; 
+}
+.road52{
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 7; 
+}
+.road53{
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 7; 
+}
+.road54{
+    grid-column-start: 14;
+    grid-column-end: 15;
+    grid-row-start: 7; 
+}
+.road55{
+    grid-column-start: 16;
+    grid-column-end: 17;
+    grid-row-start: 7; 
+}
+.road56{
+    grid-column-start: 18;
+    grid-column-end: 19;
+    grid-row-start: 7; 
+}
+.road57{
+    grid-column-start:20;
+    grid-column-end: 21;
+    grid-row-start: 7; 
+}
+.road58{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 8; 
+}
+.road59{
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 8; 
+}
+.road60{
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 8; 
+}
+.road61{
+    grid-column-start: 15;
+    grid-column-end: 16;
+    grid-row-start: 8; 
+}
+.road62{
+    grid-column-start: 19;
+    grid-column-end: 20;
+    grid-row-start: 8; 
+}
+.road63{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9; 
+}
+.road64{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 9; 
+}
+.road65{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 9; 
+}
+.road66{
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 9; 
+}
+.road67{
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 9; 
+}
+.road68{
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 9; 
+}
+.road69{
+    grid-column-start: 14;
+    grid-column-end: 15;
+    grid-row-start: 9; 
+}
+.road70{
+    grid-column-start: 16;
+    grid-column-end: 17;
+    grid-row-start: 9; 
+}
+.road71{
+    grid-column-start: 18;
+    grid-column-end: 19;
+    grid-row-start: 9; 
+}
+.road72{
+    grid-column-start: 20;
+    grid-column-end: 21;
+    grid-row-start: 9; 
+}
+.road73{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10; 
+}
+.road74{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 10; 
+}
+.road75{
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 10; 
+}
+.road76{
+    grid-column-start: 13;
+    grid-column-end: 14;
+    grid-row-start: 10; 
+}
+.road77{
+    grid-column-start: 17;
+    grid-column-end: 18;
+    grid-row-start: 10; 
+}
+.road78{
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 10; 
+}
+.road79{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 11; 
+}
+.road80{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 11; 
+}
+.road81{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 11; 
+}
+.road82{
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 11; 
+}
+.road83{
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 11; 
+}
+.road84{
+    grid-column-start: 12;
+    grid-column-end: 13;
+    grid-row-start: 11; 
+}
+.road85{
+    grid-column-start: 14;
+    grid-column-end: 15;
+    grid-row-start: 11; 
+}
+.road86{
+    grid-column-start: 16;
+    grid-column-end: 17;
+    grid-row-start: 11; 
+}
+.road87{
+    grid-column-start: 18;
+    grid-column-end: 19;
+    grid-row-start: 11; 
+}
+.road88{
+    grid-column-start: 20;
+    grid-column-end: 21;
+    grid-row-start: 11; 
+}
+.tile1{
+
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;     
+}
+.tile2{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 2; 
+}
+.tile3{
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 2; 
+}
+.tile4{
+    grid-column-start: 14;
+    grid-column-end: 17;
+    grid-row-start: 2; 
+}
+
+.tile5{
+    grid-column-start: 18;
+    grid-column-end: 21;
+    grid-row-start: 2; 
+}
+.tile6{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4; 
+}
+.tile7{
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 4; 
+}
+.tile8{
+    grid-column-start: 12;
+    grid-column-end: 15;
+    grid-row-start: 4; 
+}
+.tile9{
+    grid-column-start: 16;
+    grid-column-end: 19;
+    grid-row-start: 4; 
+}
+.tile10{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 6; 
+}
+.tile11{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 6; 
+}
+.tile12{
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 6; 
+}
+.tile13{
+    grid-column-start: 14;
+    grid-column-end: 17;
+    grid-row-start: 6; 
+}
+.tile14{
+    grid-column-start: 18;
+    grid-column-end: 21;
+    grid-row-start: 6; 
+}
+.tile15{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 8; 
+}
+.tile16{
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 8; 
+}
+.tile17{
+    grid-column-start: 12;
+    grid-column-end: 15;
+    grid-row-start: 8; 
+}
+.tile18{
+    grid-column-start: 16;
+    grid-column-end: 19;
+    grid-row-start: 8; 
+}
+.tile19{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 10; 
+}
+.tile20{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 10; 
+}
+.tile21{
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 10; 
+}
+.tile22{
+    grid-column-start: 14;
+    grid-column-end: 17;
+    grid-row-start: 10; 
+}
+.tile23{
+    grid-column-start: 18;
+    grid-column-end: 21;
+    grid-row-start: 10; 
+}
