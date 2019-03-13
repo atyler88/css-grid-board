@@ -1,29 +1,47 @@
 body, html {
-    margin: 0;
-    font-family: 'Arial';
-    font-size: 7px;
-    text-align: center;
-    align-items: center;
-
-}
-.container {
     display: grid;
-    height: 100vh;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+.grid {
+    height: 90vh;
+    grid-column-gap: 1rem;
+    display: grid;
+    margin: 4vh;
     grid-template-columns: 3fr 1fr;
     /* overflow-y:auto; */
+   
+
 }
 .board {
-    justify-content: center;
     display: grid;
-    grid-template-columns: .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr;
-    grid-template-rows:  .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr 3fr .5fr;
-    background-image: linear-gradient(240deg, beige,beige);   
+    grid-template-columns: 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin;
+    grid-template-rows:  4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin 12vmin 4vmin;
+    text-align: center;
+    background-image: linear-gradient(240deg, beige,beige);  
+    border: solid rgb(194, 253, 253) 4px;
+    border-radius: 10px;
 }
 .menu {
+    border: solid black 1px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:  1fr 1fr 1fr 1fr 1fr ;
-    /* overflow-y:scroll; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
+
 }
 .dice{
     background: whitesmoke;
@@ -34,29 +52,52 @@ body, html {
 }
 .house{
     background: rgb(150, 150, 150);
-    margin: 0px;
-    z-index: 3;
+    z-index: 5;
+    opacity: 0;
+    border-radius: 50%;
+    box-shadow: 1px 1px rgb(101, 131, 131);
+}
+.house:hover{
+    background: rgb(150, 150, 150);
 
+    z-index: 5;
+    opacity: 1;
+    border-radius: 50%;
 }
 .road{
     background:lightgray;
-    margin: 0px;
+    z-index: 5;
+    border-radius: 1px;
+    opacity: 0;
+
+    box-shadow: 1px 1px rgb(101, 131, 131);
+}
+.road:hover{
+    background:lightgray;
+    z-index: 5;
+
+    border-radius: 1px;
+    opacity: 100;
 }
 .tile{
     display: grid;
     grid-auto-rows: 1fr 1fr 1fr;
     font-family: 'Arial';
-    font-size: 10px;
+    font-size: 16px;
     background-image: linear-gradient(240deg, beige,beige);   
     box-shadow: 1px 1px rgb(101, 131, 131);
-    margin: 0px;
+    display: inline-block;
     z-index: 4;
+    border-radius: 5px;
+
 }
+
 .port{
     font-family: 'Arial';
     font-size: 10px;
     background: rgb(194, 253, 253);
     z-index: 4;
+    border-radius: 5px;
 }
 .port1{
     grid-column-start: 1;
@@ -914,7 +955,8 @@ body, html {
 .tile12{
     grid-column-start: 10;
     grid-column-end: 13;
-    grid-row-start: 6; 
+    grid-row-start: 6;
+    background: yellowgreen;
 }
 .tile13{
     grid-column-start: 14;

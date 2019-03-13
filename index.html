@@ -12,8 +12,6 @@
             max = Math.floor(max);
             return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
         }
-        let gameHasStarted = false;
-        let playerTurn = "null";
         function start() {
 
             let resources = ["linear-gradient(240deg,rgb(252, 166, 7), rgb(255, 165, 0))","linear-gradient(240deg,rgb(252, 166, 7), rgb(255, 165, 0))","linear-gradient(240deg,rgb(252, 166, 7), rgb(255, 165, 0))","linear-gradient(240deg,rgb(252, 166, 7), rgb(255, 165, 0))", "yellow","yellow","yellow","yellow", "gray","gray","gray","gray", "linear-gradient(240deg, #eaee44, #90ec19)","linear-gradient(240deg, #eaee44, #90ec19)","linear-gradient(240deg, #eaee44, #90ec19)","linear-gradient(240deg, #eaee44, #90ec19)", "linear-gradient(240deg, #f8372a, #cc2900)","linear-gradient(240deg, #f8372a, #cc2900)","linear-gradient(240deg, #f8372a, #cc2900)","linear-gradient(240deg, #f8372a, #cc2900)", "rgb(194, 253, 253", "rgb(194, 253, 253", "rgb(194, 253, 253"];
@@ -24,23 +22,20 @@
                 console.log(tile);
                 document.getElementById(tile).innerHTML =  getRandomInt(2, 13);
                 document.getElementById(tile).style.background = resource;
-                document.getElementById('tile12').removeAttribute("onclick");
             }
-            gameHasStarted = true;
-            playerTurn = "red";
-
+            
         }
         function roll() {
             document.getElementById("dice1").innerHTML =  getRandomInt(1, 7);
             document.getElementById("dice2").innerHTML =  getRandomInt(1, 7);
         }
         function placeHouse(id) {
-            document.getElementById(id).style.background = playerTurn;
+            document.getElementById(id).style.background = "red";
             document.getElementById(id).style.opacity = 1;
             console.log(id);
         }
         function placeRoad(id) {
-            document.getElementById(id).style.background = playerTurn;
+            document.getElementById(id).style.background = "red";
             document.getElementById(id).style.opacity = 1;
             console.log(id);
         }
@@ -56,37 +51,15 @@
             document.getElementById(id).appendChild(dot);
             console.log(id);
         }
-
-        function endTurn() {
-            switch (playerTurn) {
-                case 'red':
-                playerTurn = "blue";
-                console.log('Red players turn has ended');
-                break;
-                case 'blue':
-                playerTurn = "yellow";
-                console.log('Blue players turn has ended');
-                break;
-                case "yellow":
-                playerTurn = "green";
-                console.log('Blue players turn has ended');
-                break;
-                case "green":
-                playerTurn = "red";
-                console.log('Blue players turn has ended');
-                break;
-                default:
-                console.log('Sorry');
-            }
-
-        }
         </script>
 </head>
 <body>
 
-    <div class="grid">
+    <div class="basegrid">
             <nav class="navbar">NAVBAR</nav>
         <div class="board">
+
+
                     <div class="road road1" onclick="placeRoad(this.id)" id="road1">r1</div>
                     <div class="road road2"onclick="placeRoad(this.id)" id="road2">r2</div>
                     <div class="road road3" onclick="placeRoad(this.id)" id="road3">r3</div>
@@ -187,7 +160,7 @@
                     <div class="road road88">r88</div>
                     <div class="tile tile10" id="tile10">Tile 10</div>
                     <div class="tile tile11" id="tile11">Tile 11</div>
-                    <div class="tile tile12" onclick="start()" id="tile12"  >Start</div>
+                    <div class="tile tile12" id="tile12">Tile 12</div>
                     <div class="tile tile13" id="tile13">Tile 13</div>
                     <div class="tile tile14" id="tile14">Tile 14</div>
                     <div class="tile tile15" id="tile15">Tile 15</div>
@@ -269,15 +242,6 @@
                     <div class="port port2" id="port2">Port 2</div>         
                     <div class="port port3" id="port3">Port 3</div>         
                     <div class="port port4" id="port4">Port 4</div>                                        
-                </div>
-                <div class="menu">
-                    <div  onclick="roll()">Roll</div>
-                    <div class="dice card" id="dice1"></div>
-                    <div class="dice card" id="dice2"></div>
-                    <div onclick="endTurn()">End Turn</div>
-                    <div>content</div>
-                    <div>content</div>
-                    <div>content</div>
                 </div>
 
             </div>
