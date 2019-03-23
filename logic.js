@@ -68,10 +68,52 @@ function start() {
 
 }
 
-function roll() {
-    let roll1 =  getRandomInt(1, 7);
-    let roll2 =  getRandomInt(1, 7);
-    let diceRoll = roll1 + roll2;
-    console.log("the dice are " + roll1 + " and " + roll2)
-    return diceRoll;
+function roll(number) {
+    let diceRoll = 0;
+    let i;
+    rolls = [];
+    for(i = 0; i < number; i++){
+        let roll =  getRandomInt(1, 7);
+        diceRoll += roll;
+        // console.log(roll);
+        rolls.push(roll);
+    }
+    rolls.sort(function(a, b) {
+        return b - a;
+      });
+    // console.log(rolls);
+    // console.log("total " + diceRoll);
+    return rolls;
+}
+
+function rollOff(x, y) {
+
+    roll(x);
+    let rollX = rolls;
+    console.log("roll x = ");
+    console.log(rollX);
+    roll(y);
+    let rollY = rolls;
+    console.log("roll Y = ");
+    console.log(rollY);
+
+    let xLosses = 0;
+    let yLosses = 0;
+    for(i = 0; i < x; i++){
+
+        console.log("x " + rollX[i]);
+        console.log("y " + rollY[i]);
+        if (rollX[i] > rollY[i]) {
+           console.log("x wins");
+           yLosses += 1;
+           console.log("y losses = " + yLosses);
+        };
+        if(rollX[i] < rollY[i]) {
+            console.log("Y wins");
+            xLosses += 1;
+            console.log("X losses = " + xLosses);
+        };
+    }
+    console.log("x total losses " + xLosses);
+    console.log("y total losses " + yLosses);
 }
