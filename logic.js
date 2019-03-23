@@ -1,29 +1,39 @@
 const board = {
     tile1: {
         name: "tile 1",
-        resource: 'null',
+        resource: null,
         number: 0,
-        playerOwns: 'null',
+        playerOwns: null,
         armyNumber: 0,
     },
     tile2: {
         name: "Tile 2",
-        resource: 'null',
+        resource: null,
         number: 0,
-        playerOwns: 'null',
+        playerOwns: null,
+        armyNumber: 0,
+    },
+    tile3: {
+        name: "Tile 3",
+        resource: null,
+        number: 0,
+        playerOwns: null,
         armyNumber: 0,
     },
     house1: {
+        type: "empty",
         name: "House 1",
-        playerOwns: 'null',
+        playerOwns: null,
     },
     house2: {
+        type: "empty",
         name: "House 2",
-        playerOwns: 'null',
+        playerOwns: null,
     },
     house3: {
+        type: "empty",
         name: "House 3",
-        playerOwns: 'null',
+        playerOwns: null,
     },
 
 }
@@ -31,10 +41,14 @@ tileNieghbors = {
     tile1: [board.house1, board.house2],
     tile2: [board.house2, board.house3]
 }
-const playerOne = {
-    name: "player one",
-    bricks: 0,
-    wood: 0,  
+class Player {
+    constructor(name, color){
+        this.name = name;
+        this.color = color;
+        this.bricks = 0;
+        this.wood = 0; 
+    }
+
 }
 
 const playerTwo = {
@@ -44,18 +58,17 @@ const playerTwo = {
     
 }
 
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
-let gameHasStarted = false;
-let playerTurn = "null";
 function start() {
 
-    let resources = ["brick", "wood"];
-    for (let i = 1; i < 3; i++) { 
+    let resources = ["brick", "wood", "wheat"];
+    for (let i = 1; i < 4; i++) { 
 
         let resource = resources.splice(Math.floor(Math.random()*resources.length), 1);
         resource = resource.toString();
@@ -63,10 +76,26 @@ function start() {
         console.log(tile);
         console.log(resource);
         board[tile].resource = resource;
+        let element = document.getElementById(tile);
+        
+        element.classList.remove("deep-purple");
+        switch(resource) {
+            case "brick":
+                element.classList.add("red");
+              break;
+            case "wood":
+                element.classList.add("green");
+              break;
+            case "wheat":
+                element.classList.add("yellow");
+              break;
+          }
     }
-    gameHasStarted = true;
-
 }
+function red() {
+    var element = document.getElementById("tile1");
+    element.classList.add("red");
+ }
 
 function roll(number) {
     let diceRoll = 0;
