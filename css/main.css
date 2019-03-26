@@ -24,6 +24,10 @@ body{
     grid-template-columns: repeat(4, 1fr 2fr) 1fr;
     grid-template-rows: repeat(2, 1fr 2fr) 1fr;
 }
+.tile{
+    justify-items: center;
+    align-items: center;
+}
 
 .container {
     background: lightgray;
@@ -90,20 +94,38 @@ body{
 }
 .house11{
     display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+}
+.house12{
+    display: grid;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 5;
 }
-.house12{
+.house13{
     display: grid;
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 5; 
 }
-.house13{
+.house14{
     display: grid;
     grid-column-start: 7;
     grid-column-end: 8;
+    grid-row-start: 5; 
+}
+.house15{
+    display: grid;
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 5; 
+}
+.house16{
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 12;
     grid-row-start: 5; 
 }
 .tile1{
@@ -120,7 +142,19 @@ body{
 }
 .tile3{
     display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4; 
+}
+.tile4{
+    display: grid;
     grid-column-start: 4;
     grid-column-end: 7;
+    grid-row-start: 4; 
+}
+.tile5{
+    display: grid;
+    grid-column-start: 8;
+    grid-column-end: 10;
     grid-row-start: 4; 
 }
