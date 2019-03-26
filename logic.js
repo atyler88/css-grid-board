@@ -151,6 +151,7 @@ class Player {
         this.wood = 0; 
         this.livestock = 0;
         this.addHouse = function(house) {
+            console.log(this.brick)
             house = house.toString();
             console.log(house);
             board[house].playerOwns = this.name;
@@ -205,9 +206,6 @@ class Player {
 
 }
 
-function findNeighbor(){
-    return
-}
 const playerOne = new Player("aaron", "orange");
 const playerTwo = new Player("joline", "pink");
 
@@ -246,10 +244,23 @@ function start() {
         element.innerHTML = board[tile].number;
     }
 }
-// function red() {
-//     let element = document.getElementById("house1");
-//     element.classList.add("red");
-//  }
+function nextTurn(playerTurn){
+    switch(playerTurn) {
+        case playerOne.name:
+        console.log("shaggy");
+            playerOne[resource] += 1;
+        break;
+        case playerTwo.name:
+            playerTwo[resource] += 1;
+        break;
+        case playerThree.name:
+            playerThree[resource] +=1;
+        break;
+        case playerFour.name:
+        playerFour[resource] += 1;
+        break;
+    }
+};
 
  /*Dice Roll function: this function randomly generates a number between 1 and 6 and adds it to an array.
  the variable number is used to determine the number of dice rolled. */

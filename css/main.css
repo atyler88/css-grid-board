@@ -11,9 +11,15 @@ body{
     align-items: center;
 
 }
+
+.resource-card{
+    display: grid;
+    width: 20vmin;
+}
 .card-panel{
     margin: 0;
     padding: 0;
+
 }
 .board{
     padding: 5px;
@@ -23,6 +29,18 @@ body{
     grid-gap: 2px;
     grid-template-columns: repeat(4, 1fr 2fr) 1fr;
     grid-template-rows: repeat(2, 1fr 2fr) 1fr;
+}
+.menu{
+    padding: 5px;
+    height: 40vmin;
+    width: 100vmin;
+    display:grid;
+    grid-gap: 2px;
+}
+.playerOne-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .tile{
     justify-items: center;
