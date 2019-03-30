@@ -11,36 +11,43 @@
 </head>
 <script src="logic.js"></script>
 <body>
-    <div class="menu card-panel amber lighten-5">
-        <div class="playerOne-menu orange lighten-3 white-text">
-            <div class="title orange lighten-3">Player One</div>
+    <div class="menu card-panel white lighten-5">
+        <div class="start-menu white lighten-3 white-text"id="start-menu">
+                <button class="btn Green lighten-2 start-button" onClick="start()">Start</button>
+        </div>
+        <div class="playerOne-menu orange lighten-3 white-text hide" id="playerOne-menu">
+            <div class="title orange lighten-3 white-text">Player One</div>
             <div class="resource-card card red darken-1 white-text">Brick</div>
             <div class="resource-card card green darken-1 white-text">Wood</div>
             <div class="resource-card card yellow darken-1 white-text">Livestock</div>
-            <button class="btn orange lighten-2">Place House</button>
-            <button class="btn red">End Turn</button>
+            <button class="p1-build btn orange lighten-2" onclick="playerOne.callAddHouse()">Place House</button>
+            <button class="btn red end-button" onclick="nextTurn(playerTurn)">End Turn</button>
         </div>
-        <div class="playerOne-menu pink lighten-3 hide">
-            <div class="title pink lighten-3">Player Two </div>
-            <button class="btn pink lighten-2">Place House</button>
+        <div class="playerOne-menu pink lighten-3 hide" id="playerTwo-menu">
+            <div class="title pink lighten-3 white-text">Player Two </div>
+            <div class="resource-card card red darken-1 white-text">Brick</div>
+            <div class="resource-card card green darken-1 white-text">Wood</div>
+            <div class="resource-card card yellow darken-1 white-text">Livestock</div>
+            <button class="p2-build btn pink lighten-2" onclick="playerTwo.callAddHouse()">Place House</button>
+            <button class="btn red end-button" onclick="nextTurn(playerTurn)">End Turn</button>
         </div>
     </div>
     <div class="board card-panel amber lighten-5">
-        <div class="house1 card-panel lighten-2" id="house1"></div>
-        <div class="house2 card-panel lighten-2" id="house2"></div>
-        <div class="house3 card-panel lighten-2" id="house3"></div>
-        <div class="house4 card-panel lighten-2" id="house4"></div>
-        <div class="house5 card-panel lighten-2" id="house5"></div>
-        <div class="house6 card-panel lighten-2" id="house6"></div>
-        <div class="house7 card-panel lighten-2" id="house7"></div>
-        <div class="house8 card-panel lighten-2" id="house8"></div>
-        <div class="house9 card-panel lighten-2" id="house9"></div>
-        <div class="house10 card-panel lighten-2" id="house10"></div>
-        <div class="house11 card-panel lighten-2" id="house11"></div>
-        <div class="house12 card-panel lighten-2" id="house12"></div>
-        <div class="house13 card-panel lighten-2" id="house13"></div>
-        <div class="house14 card-panel lighten-2" id="house14"></div>
-        <div class="house15 card-panel lighten-2" id="house15"></div>
+        <div class="house1 house card-panel lighten-2" id="house1" value="house1"></div>
+        <div class="house2 house card-panel lighten-2" id="house2"></div>
+        <div class="house3 house card-panel lighten-2" id="house3"></div>
+        <div class="house4 house card-panel lighten-2" id="house4"></div>
+        <div class="house5 house card-panel lighten-2" id="house5"></div>
+        <div class="house6 house card-panel lighten-2" id="house6"></div>
+        <div class="house7 house card-panel lighten-2" id="house7"></div>
+        <div class="house8 house card-panel lighten-2" id="house8"></div>
+        <div class="house9 house card-panel lighten-2" id="house9"></div>
+        <div class="house10 house card-panel lighten-2" id="house10"></div>
+        <div class="house11 house card-panel lighten-2" id="house11"></div>
+        <div class="house12 house card-panel lighten-2" id="house12"></div>
+        <div class="house13 house card-panel lighten-2" id="house13"></div>
+        <div class="house14 house card-panel lighten-2" id="house14"></div>
+        <div class="house15 house card-panel lighten-2" id="house15"></div>
         <div class="tile1 tile card-panel deep-purple lighten-2" id="tile1"></div>
         <div class="tile2 tile card-panel deep-purple lighten-2" id="tile2"></div>
         <div class="tile3 tile card-panel deep-purple lighten-2" id="tile3"></div>

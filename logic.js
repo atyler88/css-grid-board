@@ -3,8 +3,10 @@ const board = {
         name: "tile1",
         resource: null,
         number: 0,
-        playerOwns: null,
-        armyNumber: 0,
+        playerOne: 0,
+        playerTwo: 0,
+        playerThree: 0,
+        playerFour: 0,
         houseNeighbor: [this.house1, this.house2, this.house3, this.house6, this.house7, this.house8],
         tileNeighbor: [this.tile2, this.tile3, this.tile4]
     },
@@ -12,8 +14,10 @@ const board = {
         name: "tile2",
         resource: null,
         number: 0,
-        playerOwns: null,
-        armyNumber: 0,
+        playerOne: 0,
+        playerTwo: 0,
+        playerThree: 0,
+        playerFour: 0,
         houseNeighbor: [this.house3, this.house4, this.house5, this.house8, this.house9, this.house10],
         tileNeighbor: [this.tile1, this.tile4, this.tile5]
     },
@@ -21,8 +25,10 @@ const board = {
         name: "tile3",
         resource: null,
         number: 0,
-        playerOwns: null,
-        armyNumber: 0,
+        playerOne: 0,
+        playerTwo: 0,
+        playerThree: 0,
+        playerFour: 0,
         houseNeighbor: [this.house6, this.house7, this.house11, this.house12],
         tileNeighbor: [this.tile1, this.tile4]
     },
@@ -30,8 +36,10 @@ const board = {
         name: "tile4",
         resource: null,
         number: 0,
-        playerOwns: null,
-        armyNumber: 0,
+        playerOne: 0,
+        playerTwo: 0,
+        playerThree: 0,
+        playerFour: 0,
         houseNeighbor: [this.house7, this.house8, this.house9, this.house12, this.house13, this.house14],
         tileNeighbor: [this.tile1, this.tile2, this.tile3, this.tile5]
     },
@@ -39,8 +47,10 @@ const board = {
         name: "tile5",
         resource: null,
         number: 0,
-        playerOwns: null,
-        armyNumber: 0,
+        playerOne: 0,
+        playerTwo: 0,
+        playerThree: 0,
+        playerFour: 0,
         houseNeighbor: [this.house9, this.house10, this.house14, this.house15],
         tileNeighbor: [this.tile2, this.tile4]
     },
@@ -142,7 +152,50 @@ const tileNeighbors = {
         houseNeighbor: [board.house9.name, board.house10.name, board.house14.name, board.house15.name],
         tileNeighbor: [board.tile2, board.tile4]
     }
+};
+
+const houseNeighbors = {
+    house1: ["house2", "house6"],
+    house2: ["house1", "house3"],
+    house3: ["house2", "house4"],
 }
+
+function start() {
+    let start = document.getElementById("start-menu");
+    start.classList.add("hide");
+    let resources = ["brick", "wood", "livestock", "wood", "brick"];
+    let numbers = [1, 2, 3, 4, 5];
+    for (let i = 1; i < 6; i++) { 
+
+        let resource = resources.splice(Math.floor(Math.random()*resources.length), 1);
+        let number = numbers.splice(Math.floor(Math.random()*resources.length), 1);
+        resource = resource.toString();
+        number = number.toString();
+        tile = "tile" + i
+        console.log(tile);
+        console.log(resource);
+        board[tile].resource = resource;
+        board[tile].number = number;
+        let element = document.getElementById(tile);
+        console.log(resources);
+        
+        element.classList.remove("deep-purple");
+        switch(resource) {
+            case "brick":
+                element.classList.add("red");
+              break;
+            case "wood":
+                element.classList.add("green");
+              break;
+            case "livestock":
+                element.classList.add("yellow");
+              break;
+          }
+        element.innerHTML = board[tile].number;
+    }
+    nextTurn(playerTurn);
+}
+
 class Player {
     constructor(name, color){
         this.name = name;
@@ -150,6 +203,7 @@ class Player {
         this.brick = 0;
         this.wood = 0; 
         this.livestock = 0;
+
         this.addHouse = function(house) {
             console.log(this.brick)
             house = house.toString();
@@ -158,6 +212,25 @@ class Player {
             console.log(board[house]);
             let element = document.getElementById(house);
             element.classList.add(this.color);
+        }
+        let houseHandler = (event) => {
+            let e = event.target.id;
+            let isHouse = e.startsWith("house");
+            if (isHouse) {
+            
+              console.log("Clicked", e);
+              this.addHouse(event.target.id)
+              document.body.removeEventListener("click",houseHandler)
+            }
+          }
+        this.callAddHouse = function() {
+            document.body.addEventListener("click",houseHandler);
+            // let i;
+            // // for(i = 1; i < 16; i++){
+            // //     let element = document.getElementById("house"+ i);
+            // //     element.classList.add("pulse");
+            // //     element.addEventListener("dblclick", playerOne.addHouse("house"+i));
+            // // }
         }
         this.resourceRoll = function() {
             roll(1,6);
@@ -209,56 +282,35 @@ class Player {
 const playerOne = new Player("aaron", "orange");
 const playerTwo = new Player("joline", "pink");
 
+let playerTurn = 0;
 
 
-function start() {
+let endTurn = document.getElementsByClassName("end-button");
 
-    let resources = ["brick", "wood", "livestock", "wood", "brick"];
-    let numbers = [1, 2, 3, 4, 5];
-    for (let i = 1; i < 6; i++) { 
+function nextTurn(Turn){
+    let menuOne = document.getElementById("playerOne-menu");
+    let menuTwo = document.getElementById("playerTwo-menu");
+    switch(Turn) {
+        case 1:
+        console.log(playerTurn);
 
-        let resource = resources.splice(Math.floor(Math.random()*resources.length), 1);
-        let number = numbers.splice(Math.floor(Math.random()*resources.length), 1);
-        resource = resource.toString();
-        number = number.toString();
-        tile = "tile" + i
-        console.log(tile);
-        console.log(resource);
-        board[tile].resource = resource;
-        board[tile].number = number;
-        let element = document.getElementById(tile);
-        console.log(resources);
-        
-        element.classList.remove("deep-purple");
-        switch(resource) {
-            case "brick":
-                element.classList.add("red");
-              break;
-            case "wood":
-                element.classList.add("green");
-              break;
-            case "livestock":
-                element.classList.add("yellow");
-              break;
-          }
-        element.innerHTML = board[tile].number;
-    }
-}
-function nextTurn(playerTurn){
-    switch(playerTurn) {
-        case playerOne.name:
-        console.log("shaggy");
-            playerOne[resource] += 1;
+            menuOne.classList.add("hide");
+            menuTwo.classList.remove("hide");
+            playerTurn = 2;
         break;
-        case playerTwo.name:
-            playerTwo[resource] += 1;
+        case 2:
+        console.log(playerTurn);
+          
+            menuOne.classList.remove("hide");
+            menuTwo.classList.add("hide");
+            playerTurn = 1;
         break;
-        case playerThree.name:
-            playerThree[resource] +=1;
+        case 0:
+        console.log(playerTurn);
+        playerTurn = 1;
+        menuOne.classList.remove("hide");
         break;
-        case playerFour.name:
-        playerFour[resource] += 1;
-        break;
+
     }
 };
 

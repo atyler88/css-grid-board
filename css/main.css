@@ -9,6 +9,7 @@ body{
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
 
 }
 
@@ -36,11 +37,26 @@ body{
     width: 100vmin;
     display:grid;
     grid-gap: 2px;
+    
 }
 .playerOne-menu{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.playerTwo-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.start-menu{
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 .tile{
     justify-items: center;
@@ -49,6 +65,9 @@ body{
 
 .container {
     background: lightgray;
+}
+.house{
+    z-index: 2;
 }
 .house1{
     display: grid;
