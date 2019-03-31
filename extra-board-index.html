@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/extra-board.css">
+</head>
+<script src="logic.js"></script>
+<body>
+    <div class="menu card-panel white lighten-5">
+        <div class="start-menu white lighten-3 white-text"id="start-menu">
+                <button class="btn Green lighten-2 start-button" onClick="start()">Start</button>
+        </div>
+        <div class="playerOne-menu orange lighten-3 white-text hide" id="playerOne-menu">
+            <div class="title orange lighten-3 white-text">Player One</div>
+            <div class="resource-card card red darken-1 white-text">Brick</div>
+            <div class="resource-card card green darken-1 white-text">Wood</div>
+            <div class="resource-card card yellow darken-1 white-text">Livestock</div>
+            <button class="p1-build btn orange lighten-2" onclick="playerOne.callAddHouse()">Place House</button>
+            <button class="btn red end-button" onclick="nextTurn(playerTurn)">End Turn</button>
+        </div>
+        <div class="playerOne-menu pink lighten-3 hide" id="playerTwo-menu">
+            <div class="title pink lighten-3 white-text">Player Two </div>
+            <div class="resource-card card red darken-1 white-text">Brick</div>
+            <div class="resource-card card green darken-1 white-text">Wood</div>
+            <div class="resource-card card yellow darken-1 white-text">Livestock</div>
+            <button class="p2-build btn pink lighten-2" onclick="playerTwo.callAddHouse()">Place House</button>
+            <button class="btn red end-button" onclick="nextTurn(playerTurn)">End Turn</button>
+        </div>
+    </div>
+    <div class="board card-panel amber lighten-4">
+        <div class="corner-1"></div>
+        <div class="house1 house card-panel hidden lighten-2" id="house1" value="house1"></div>
+        <div class="house2 house card-panel hidden lighten-2" id="house2"></div>
+        <div class="house3 house card-panel hidden lighten-2" id="house3"></div>
+        <div class="house4 house card-panel hidden lighten-2" id="house4"></div>
+        <div class="house5 house card-panel hidden lighten-2" id="house5"></div>
+        <div class="house6 house card-panel hidden lighten-2" id="house6"></div>
+        <div class="house7 house card-panel hidden lighten-2" id="house7"></div>
+        <div class="house8 house card-panel hidden lighten-2" id="house8"></div>
+        <div class="house9 house card-panel hidden lighten-2" id="house9"></div>
+        <div class="house10 house card-panel hidden lighten-2" id="house10"></div>
+        <div class="house11 house card-panel hidden lighten-2" id="house11"></div>
+        <div class="house12 house card-panel hidden lighten-2" id="house12"></div>
+        <div class="house13 house card-panel hidden lighten-2" id="house13"></div>
+        <div class="house14 house card-panel hidden lighten-2" id="house14"></div>
+        <div class="house15 house card-panel hidden lighten-2" id="house15"></div>
+        <div class="house16 house card-panel hidden lighten-2" id="house16"></div>
+        <div class="house17 house card-panel hidden lighten-2" id="house17"></div>
+        <div class="house18 house card-panel hidden lighten-2" id="house18"></div>
+        <div class="house19 house card-panel hidden lighten-2" id="house19"></div>
+        <div class="house20 house card-panel hidden lighten-2" id="house20"></div>
+        <div class="house21 house card-panel hidden lighten-2" id="house21"></div>
+        <div class="house22 house card-panel hidden lighten-2" id="house22"></div>
+        <div class="house23 house card-panel hidden lighten-2" id="house23"></div>
+        <div class="house24 house card-panel hidden lighten-2" id="house24"></div>
+        <div class="house25 house card-panel hidden lighten-2" id="house25"></div>
+        <div class="house26 house card-panel hidden lighten-2" id="house26"></div>
+        <div class="house27 house card-panel hidden lighten-2" id="house27"></div>
+        <div class="house28 house card-panel hidden lighten-2" id="house28"></div>
+        <div class="house29 house card-panel hidden lighten-2" id="house29"></div>
+        <div class="house30 house card-panel hidden lighten-2" id="house30"></div>
+        <div class="house31 house card-panel hidden lighten-2" id="house31"></div>
+        <div class="house32 house card-panel hidden lighten-2" id="house32"></div>
+        <div class="house33 house card-panel hidden lighten-2" id="house33"></div>
+        <div class="house34 house card-panel hidden lighten-2" id="house34"></div>
+        <div class="house35 house card-panel hidden lighten-2" id="house35"></div>
+        <div class="house36 house card-panel hidden lighten-2" id="house36"></div>
+        <div class="house37 house card-panel hidden lighten-2" id="house37"></div>
+        <div class="house38 house card-panel hidden lighten-2" id="house38"></div>
+        <div class="house39 house card-panel hidden lighten-2" id="house39"></div>
+        <div class="house40 house card-panel hidden lighten-2" id="house40"></div>
+        <div class="house41 house card-panel hidden lighten-2" id="house41"></div>
+        <div class="house42 house card-panel hidden lighten-2" id="house42"></div>
+        <div class="house43 house card-panel hidden lighten-2" id="house43"></div>
+        <div class="house44 house card-panel hidden lighten-2" id="house44"></div>
+        <div class="house45 house card-panel hidden lighten-2" id="house45"></div>
+        <div class="house46 house card-panel hidden lighten-2" id="house46"></div>
+        <div class="house47 house card-panel hidden lighten-2" id="house47"></div>
+        <div class="house48 house card-panel hidden lighten-2" id="house48"></div>
+        <div class="house49 house card-panel hidden lighten-2" id="house49"></div>
+        <div class="house50 house card-panel hidden lighten-2" id="house50"></div>
+        <div class="house51 house card-panel hidden lighten-2" id="house51"></div>
+        <div class="house52 house card-panel hidden lighten-2" id="house52"></div>
+        <div class="house53 house card-panel hidden lighten-2" id="house53"></div>
+        <div class="house54 house card-panel hidden lighten-2" id="house54"></div>
+        <div class="house55 house card-panel hidden lighten-2" id="house55"></div>
+        <div class="house56 house card-panel hidden lighten-2" id="house56"></div>
+        <div class="house57 house card-panel hidden lighten-2" id="house57"></div>
+        <div class="house58 house card-panel hidden lighten-2" id="house58"></div>
+        <div class="house59 house card-panel hidden lighten-2" id="house59"></div>
+        <div class="house60 house card-panel hidden lighten-2" id="house60"></div>
+        <div class="house61 house card-panel hidden lighten-2" id="house61"></div>
+        <div class="house62 house card-panel hidden lighten-2" id="house62"></div>
+        <div class="tile1 tile card-panel deep-purple lighten-2" id="tile1"></div>
+        <div class="tile2 tile card-panel deep-purple lighten-2" id="tile2"></div>
+        <div class="tile3 tile card-panel deep-purple lighten-2" id="tile3"></div>
+        <div class="tile4 tile card-panel deep-purple lighten-2" id="tile4"></div>
+        <div class="tile5 tile card-panel deep-purple lighten-2" id="tile5"></div>
+        <div class="tile6 tile card-panel deep-purple lighten-2" id="tile6"></div>
+        <div class="tile7 tile card-panel deep-purple lighten-2" id="tile7"></div>
+        <div class="tile8 tile card-panel deep-purple lighten-2" id="tile8"></div>
+        <div class="tile9 tile card-panel deep-purple lighten-2" id="tile9"></div>
+        <div class="tile10 tile card-panel deep-purple lighten-2" id="tile10"></div>
+        <div class="tile11 tile card-panel deep-purple lighten-2" id="tile11"></div>
+        <div class="tile12 tile card-panel deep-purple lighten-2" id="tile12"></div>
+        <div class="tile13 tile card-panel deep-purple lighten-2" id="tile13"></div>
+        <div class="tile14 tile card-panel deep-purple lighten-2" id="tile14"></div>
+        <div class="tile15 tile card-panel deep-purple lighten-2" id="tile15"></div>
+        <div class="tile16 tile card-panel deep-purple lighten-2" id="tile16"></div>
+        <div class="tile17 tile card-panel deep-purple lighten-2" id="tile17"></div>
+        <div class="tile18 tile card-panel deep-purple lighten-2" id="tile18"></div>
+        <div class="tile19 tile card-panel deep-purple lighten-2" id="tile19"></div>
+        <div class="tile20 tile card-panel deep-purple lighten-2" id="tile20"></div>
+        <div class="tile21 tile card-panel deep-purple lighten-2" id="tile21"></div>
+        <div class="tile22 tile card-panel deep-purple lighten-2" id="tile22"></div>
+        <div class="tile23 tile card-panel deep-purple lighten-2" id="tile23"></div>
+        <div class="tile24 tile card-panel deep-purple lighten-2" id="tile24"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+        <div class="card-panel teal lighten-3"></div>
+
+    </div>
+</body>
+</html>

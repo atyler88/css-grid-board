@@ -1,0 +1,644 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Arial';
+}
+
+body{
+    display:grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 5fr;
+
+}
+.container {
+    background: lightgray;
+}
+
+.resource-card{
+    display: grid;
+    width: 20vmin;
+}
+.card-panel{
+    margin: 0;
+    padding: 0;
+
+}
+.board{
+    /* padding: 5px; */
+    height: 80vmin;
+    width: 160vmin;
+    display:grid;
+    grid-gap: 2px;
+    outline: solid 10px #81d4fa;
+    outline-offset: -10px;
+    grid-template-columns: repeat(10, 1fr 1fr 1fr 1fr 10fr) 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr 1fr 1fr 1fr 10fr) 1fr 1fr 1fr 1fr;
+    z-index: 1;
+}
+
+.tile{
+    justify-items: center;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.house{
+    z-index: 3;
+    border-radius: 50%;
+
+}
+.hidden{
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+.house1{
+    display: grid;
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 5; 
+}
+.house2{
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 15;
+    grid-row-start: 1;
+    grid-row-end: 5; 
+}
+.house3{
+    display: grid;
+    grid-column-start: 16;
+    grid-column-end: 20;
+    grid-row-start: 1;
+    grid-row-end: 5; 
+}
+.house4{
+    display: grid;
+    grid-column-start: 21;
+    grid-column-end: 25;
+    grid-row-start: 1; 
+    grid-row-end: 5; 
+}
+.house5{
+    display: grid;
+    grid-column-start: 26;
+    grid-column-end: 30;
+    grid-row-start: 1;
+    grid-row-end: 5;  
+}
+.house6{
+    display: grid;
+    grid-column-start: 31;
+    grid-column-end: 35;
+    grid-row-start: 1; 
+    grid-row-end: 5; 
+}
+.house7{
+    display: grid;
+    grid-column-start: 36;
+    grid-column-end: 40;
+    grid-row-start: 1;
+    grid-row-end: 5; 
+}
+.house8{
+    display: grid;
+    grid-column-start: 41;
+    grid-column-end: 45;
+    grid-row-start: 1; 
+    grid-row-end: 5; 
+}
+.house9{
+    display: grid;
+    grid-column-start: 46;
+    grid-column-end: 50;
+    grid-row-start: 1; 
+    grid-row-end: 5; 
+}
+.house10{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 10;  
+}.house11{
+    display: grid;
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 6;
+    grid-row-end: 10; 
+}
+.house12{
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 15;
+    grid-row-start: 6;
+    grid-row-end: 10; 
+}
+.house13{
+    display: grid;
+    grid-column-start: 16;
+    grid-column-end: 20;
+    grid-row-start: 6;
+    grid-row-end: 10; 
+}
+.house14{
+    display: grid;
+    grid-column-start: 21;
+    grid-column-end: 25;
+    grid-row-start: 6; 
+    grid-row-end: 10; 
+}
+.house15{
+    display: grid;
+    grid-column-start: 26;
+    grid-column-end: 30;
+    grid-row-start: 6;
+    grid-row-end: 10;  
+}
+.house16{
+    display: grid;
+    grid-column-start: 31;
+    grid-column-end: 35;
+    grid-row-start: 6; 
+    grid-row-end: 10; 
+}
+.house17{
+    display: grid;
+    grid-column-start: 36;
+    grid-column-end: 40;
+    grid-row-start: 6;
+    grid-row-end: 10; 
+}
+.house18{
+    display: grid;
+    grid-column-start: 41;
+    grid-column-end: 45;
+    grid-row-start: 6; 
+    grid-row-end: 10; 
+}
+.house19{
+    display: grid;
+    grid-column-start: 46;
+    grid-column-end: 50;
+    grid-row-start: 6; 
+    grid-row-end: 10; 
+}
+.house20{
+    display: grid;
+    grid-column-start: 51;
+    grid-column-end: 55;
+    grid-row-start: 6; 
+    grid-row-end: 10; 
+}
+.house21{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 11;
+    grid-row-end: 15;  
+}.house22{
+    display: grid;
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 11;
+    grid-row-end: 15; 
+}
+.house23{
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 15;
+    grid-row-start: 11;
+    grid-row-end: 15; 
+}
+.house24{
+    display: grid;
+    grid-column-start: 16;
+    grid-column-end: 20;
+    grid-row-start:11;
+    grid-row-end: 15; 
+}
+.house25{
+    display: grid;
+    grid-column-start: 21;
+    grid-column-end: 25;
+    grid-row-start: 11; 
+    grid-row-end: 15; 
+}
+.house26{
+    display: grid;
+    grid-column-start: 26;
+    grid-column-end: 30;
+    grid-row-start: 11;
+    grid-row-end: 15;  
+}
+.house27{
+    display: grid;
+    grid-column-start: 31;
+    grid-column-end: 35;
+    grid-row-start: 11; 
+    grid-row-end: 15; 
+}
+.house28{
+    display: grid;
+    grid-column-start: 36;
+    grid-column-end: 40;
+    grid-row-start: 11;
+    grid-row-end: 15; 
+}
+.house29{
+    display: grid;
+    grid-column-start: 41;
+    grid-column-end: 45;
+    grid-row-start: 11; 
+    grid-row-end: 15; 
+}
+.house30{
+    display: grid;
+    grid-column-start: 46;
+    grid-column-end: 50;
+    grid-row-start: 11; 
+    grid-row-end: 15; 
+}
+.house31{
+    display: grid;
+    grid-column-start: 51;
+    grid-column-end: 55;
+    grid-row-start: 11; 
+    grid-row-end: 15; 
+}
+.house32{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 16;
+    grid-row-end: 20;  
+}.house33{
+    display: grid;
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 16;
+    grid-row-end: 20; 
+}
+.house34{
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 15;
+    grid-row-start: 16;
+    grid-row-end: 20; 
+}
+.house35{
+    display: grid;
+    grid-column-start: 16;
+    grid-column-end: 20;
+    grid-row-start:16;
+    grid-row-end: 20; 
+}
+.house36{
+    display: grid;
+    grid-column-start: 21;
+    grid-column-end: 25;
+    grid-row-start: 16; 
+    grid-row-end: 20; 
+}
+.house37{
+    display: grid;
+    grid-column-start: 26;
+    grid-column-end: 30;
+    grid-row-start: 16;
+    grid-row-end: 20;  
+}
+.house38{
+    display: grid;
+    grid-column-start: 31;
+    grid-column-end: 35;
+    grid-row-start: 16; 
+    grid-row-end: 20; 
+}
+.house39{
+    display: grid;
+    grid-column-start: 36;
+    grid-column-end: 40;
+    grid-row-start: 16;
+    grid-row-end: 20; 
+}
+.house40{
+    display: grid;
+    grid-column-start: 41;
+    grid-column-end: 45;
+    grid-row-start: 16; 
+    grid-row-end: 20; 
+}
+.house41{
+    display: grid;
+    grid-column-start: 46;
+    grid-column-end: 50;
+    grid-row-start: 16; 
+    grid-row-end: 20; 
+}
+.house42{
+    display: grid;
+    grid-column-start: 51;
+    grid-column-end: 55;
+    grid-row-start: 16; 
+    grid-row-end: 20; 
+}
+.house43{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}.house44{
+    display: grid;
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house45{
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 15;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house46{
+    display: grid;
+    grid-column-start: 16;
+    grid-column-end: 20;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house47{
+    display: grid;
+    grid-column-start: 21;
+    grid-column-end: 25;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house48{
+    display: grid;
+    grid-column-start: 26;
+    grid-column-end: 30;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house49{
+    display: grid;
+    grid-column-start: 31;
+    grid-column-end: 35;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house50{
+    display: grid;
+    grid-column-start: 36;
+    grid-column-end: 40;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house51{
+    display: grid;
+    grid-column-start: 41;
+    grid-column-end: 45;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house52{
+    display: grid;
+    grid-column-start: 46;
+    grid-column-end: 50;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house53{
+    display: grid;
+    grid-column-start: 51;
+    grid-column-end: 55;
+    grid-row-start: 21;
+    grid-row-end: 25;  
+}
+.house54{
+    display: grid;
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house55{
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end: 15;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house56{
+    display: grid;
+    grid-column-start: 16;
+    grid-column-end: 20;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house57{
+    display: grid;
+    grid-column-start: 21;
+    grid-column-end: 25;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house58{
+    display: grid;
+    grid-column-start: 26;
+    grid-column-end: 30;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house59{
+    display: grid;
+    grid-column-start: 31;
+    grid-column-end: 35;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house60{
+    display: grid;
+    grid-column-start: 36;
+    grid-column-end: 40;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house61{
+    display: grid;
+    grid-column-start: 41;
+    grid-column-end: 45;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.house62{
+    display: grid;
+    grid-column-start: 46;
+    grid-column-end: 50;
+    grid-row-start: 26;
+    grid-row-end: 30; 
+}
+.tile1{
+    display: grid;
+    grid-column-start: 8;
+    grid-column-end: 18;
+    grid-row-start: 3; 
+    grid-row-end: 8; 
+}
+.tile2{
+    display: grid;
+    grid-column-start: 18;
+    grid-column-end: 28;
+    grid-row-start: 3; 
+    grid-row-end: 8; 
+}
+.tile3{
+    display: grid;
+    grid-column-start: 28;
+    grid-column-end: 38;
+    grid-row-start: 3;
+    grid-row-end: 8; 
+}
+.tile4{
+    display: grid;
+    grid-column-start: 38;
+    grid-column-end: 48;
+    grid-row-start: 3;
+    grid-row-end: 8;  
+}
+
+.tile5{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 13;
+    grid-row-start: 8; 
+    grid-row-end: 13; 
+}
+.tile6{
+    display: grid;
+    grid-column-start: 13;
+    grid-column-end: 23;
+    grid-row-start: 8; 
+    grid-row-end: 13; 
+}
+.tile7{
+    display: grid;
+    grid-column-start: 23;
+    grid-column-end: 33;
+    grid-row-start: 8;
+    grid-row-end: 13; 
+}
+.tile8{
+    display: grid;
+    grid-column-start: 33;
+    grid-column-end: 43;
+    grid-row-start: 8;
+    grid-row-end: 13;  
+}
+.tile9{
+    display: grid;
+    grid-column-start: 43;
+    grid-column-end: 53;
+    grid-row-start: 8;
+    grid-row-end: 13; 
+}
+.tile10{
+    display: grid;
+    grid-column-start: 8;
+    grid-column-end: 18;
+    grid-row-start: 13; 
+    grid-row-end: 18; 
+}
+.tile11{
+    display: grid;
+    grid-column-start: 18;
+    grid-column-end: 28;
+    grid-row-start: 13; 
+    grid-row-end: 18; 
+}
+.tile12{
+    display: grid;
+    grid-column-start: 28;
+    grid-column-end: 38;
+    grid-row-start: 13;
+    grid-row-end: 18; 
+}
+.tile13{
+    display: grid;
+    grid-column-start: 38;
+    grid-column-end: 48;
+    grid-row-start: 13;
+    grid-row-end: 18;  
+}
+
+.tile14{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 13;
+    grid-row-start: 18; 
+    grid-row-end: 23; 
+}
+.tile15{
+    display: grid;
+    grid-column-start: 13;
+    grid-column-end: 23;
+    grid-row-start: 18; 
+    grid-row-end: 23; 
+}
+.tile16{
+    display: grid;
+    grid-column-start: 23;
+    grid-column-end: 33;
+    grid-row-start: 18;
+    grid-row-end: 23; 
+}
+.tile17{
+    display: grid;
+    grid-column-start: 33;
+    grid-column-end: 43;
+    grid-row-start: 18;
+    grid-row-end: 23;  
+}
+.tile18{
+    display: grid;
+    grid-column-start: 43;
+    grid-column-end: 53;
+    grid-row-start: 18;
+    grid-row-end: 23; 
+}
+.tile19{
+    display: grid;
+    grid-column-start: 8;
+    grid-column-end: 18;
+    grid-row-start: 23; 
+    grid-row-end: 28; 
+}
+.tile20{
+    display: grid;
+    grid-column-start: 18;
+    grid-column-end: 28;
+    grid-row-start: 23; 
+    grid-row-end: 28; 
+}
+.tile21{
+    display: grid;
+    grid-column-start: 28;
+    grid-column-end: 38;
+    grid-row-start: 23;
+    grid-row-end: 28; 
+}
+.tile22{
+    display: grid;
+    grid-column-start: 38;
+    grid-column-end: 48;
+    grid-row-start: 23;
+    grid-row-end: 28;  
+}
+
