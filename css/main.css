@@ -4,7 +4,8 @@ body, html {
     font-family: 'Arial';
 }
 
-body{
+.body-container{
+    margin-top: 10vh;
     display:grid;
     grid-template-rows: auto;
     justify-items: center;

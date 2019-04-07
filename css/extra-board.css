@@ -4,7 +4,7 @@ body, html {
     font-family: 'Arial';
 }
 
-body{
+.game-container{
     display:grid;
     grid-template-rows: auto;
     justify-items: center;
