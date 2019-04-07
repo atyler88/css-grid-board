@@ -507,7 +507,318 @@ const board = {
         name: "house62",
         playerOwns: null,
     },
+    road1: {
+        type: "empty",
+        name: "road1",
+        playerOwns: null,
+    },
+    road2: {
+        type: "empty",
+        name: "road2",
+        playerOwns: null,
+    },
+    road3: {
+        type: "empty",
+        name: "road3",
+        playerOwns: null,
+    },
+    road4: {
+        type: "empty",
+        name: "road4",
+        playerOwns: null,
+    },
+    road5: {
+        type: "empty",
+        name: "road5",
+        playerOwns: null,
+    },
+    road6: {
+        type: "empty",
+        name: "road6",
+        playerOwns: null,
+    },
+    road7: {
+        type: "empty",
+        name: "road7",
+        playerOwns: null,
+    },
+    road8: {
+        type: "empty",
+        name: "road8",
+        playerOwns: null,
+    },
+    road9: {
+        type: "empty",
+        name: "road9",
+        playerOwns: null,
+    },
+    road10: {
+        type: "empty",
+        name: "road10",
+        playerOwns: null,
+    },
+    road11: {
+        type: "empty",
+        name: "road11",
+        playerOwns: null,
+    },
+    road12: {
+        type: "empty",
+        name: "road12",
+        playerOwns: null,
+    },
+    road13: {
+        type: "empty",
+        name: "road13",
+        playerOwns: null,
+    },
+    road14: {
+        type: "empty",
+        name: "road14",
+        playerOwns: null,
+    },
+    road15: {
+        type: "empty",
+        name: "road15",
+        playerOwns: null,
+    },
+    road16: {
+        type: "empty",
+        name: "road16",
+        playerOwns: null,
+    },
+    road17: {
+        type: "empty",
+        name: "road17",
+        playerOwns: null,
+    },
+    road18: {
+        type: "empty",
+        name: "road18",
+        playerOwns: null,
+    },
+    road19: {
+        type: "empty",
+        name: "road19",
+        playerOwns: null,
+    },
+    road20: {
+        type: "empty",
+        name: "road20",
+        playerOwns: null,
+    },
+    road21: {
+        type: "empty",
+        name: "road21",
+        playerOwns: null,
+    },
+    road22: {
+        type: "empty",
+        name: "road22",
+        playerOwns: null,
+    },
+    road23: {
+        type: "empty",
+        name: "road23",
+        playerOwns: null,
+    },
+    road24: {
+        type: "empty",
+        name: "road24",
+        playerOwns: null,
+    },
+    road25: {
+        type: "empty",
+        name: "road25",
+        playerOwns: null,
+    },
+    road26: {
+        type: "empty",
+        name: "road26",
+        playerOwns: null,
+    },
+    road27: {
+        type: "empty",
+        name: "road27",
+        playerOwns: null,
+    },
+    road28: {
+        type: "empty",
+        name: "road28",
+        playerOwns: null,
+    },
+    road29: {
+        type: "empty",
+        name: "road29",
+        playerOwns: null,
+    },
+    road30: {
+        type: "empty",
+        name: "road30",
+        playerOwns: null,
+    },
+    road31: {
+        type: "empty",
+        name: "road31",
+        playerOwns: null,
+    },
+    road32: {
+        type: "empty",
+        name: "road32",
+        playerOwns: null,
+    },
+    road33: {
+        type: "empty",
+        name: "road33",
+        playerOwns: null,
+    },
+    road34: {
+        type: "empty",
+        name: "road34",
+        playerOwns: null,
+    },
+    road35: {
+        type: "empty",
+        name: "road35",
+        playerOwns: null,
+    },
+    road36: {
+        type: "empty",
+        name: "road36",
+        playerOwns: null,
+    },
+    road37: {
+        type: "empty",
+        name: "road37",
+        playerOwns: null,
+    },
+    road38: {
+        type: "empty",
+        name: "road38",
+        playerOwns: null,
+    },
+    road39: {
+        type: "empty",
+        name: "road39",
+        playerOwns: null,
+    },
+    road40: {
+        type: "empty",
+        name: "road40",
+        playerOwns: null,
+    },
+    road41: {
+        type: "empty",
+        name: "road41",
+        playerOwns: null,
+    },
+    road42: {
+        type: "empty",
+        name: "road42",
+        playerOwns: null,
+    },
+    road43: {
+        type: "empty",
+        name: "road43",
+        playerOwns: null,
+    },
+    road44: {
+        type: "empty",
+        name: "road44",
+        playerOwns: null,
+    },
+    road45: {
+        type: "empty",
+        name: "road45",
+        playerOwns: null,
+    },
+    road46: {
+        type: "empty",
+        name: "road46",
+        playerOwns: null,
+    },
+    road47: {
+        type: "empty",
+        name: "road47",
+        playerOwns: null,
+    },
+    road48: {
+        type: "empty",
+        name: "road48",
+        playerOwns: null,
+    },
+    road49: {
+        type: "empty",
+        name: "road49",
+        playerOwns: null,
+    },
+    road50: {
+        type: "empty",
+        name: "road50",
+        playerOwns: null,
+    },
+    road51: {
+        type: "empty",
+        name: "road51",
+        playerOwns: null,
+    },
+    road52: {
+        type: "empty",
+        name: "road52",
+        playerOwns: null,
+    },
+    road53: {
+        type: "empty",
+        name: "road53",
+        playerOwns: null,
+    },
+    road54: {
+        type: "empty",
+        name: "road54",
+        playerOwns: null,
+    },
+    road55: {
+        type: "empty",
+        name: "road55",
+        playerOwns: null,
+    },
+    road56: {
+        type: "empty",
+        name: "road56",
+        playerOwns: null,
+    },
+    road57: {
+        type: "empty",
+        name: "road57",
+        playerOwns: null,
+    },
+    road58: {
+        type: "empty",
+        name: "road58",
+        playerOwns: null,
+    },
+    road59: {
+        type: "empty",
+        name: "road59",
+        playerOwns: null,
+    },
+    road60: {
+        type: "empty",
+        name: "road60",
+        playerOwns: null,
+    },
+    road61: {
+        type: "empty",
+        name: "road61",
+        playerOwns: null,
+    },
+    road62: {
+        type: "empty",
+        name: "road62",
+        playerOwns: null,
+    },
 }
+
 const tileNeighbors = {
     tile1: {
         houseNeighbor: [board.house1.name, board.house2.name, board.house3.name, board.house6.name, board.house7.name, board.house8.name],
@@ -543,7 +854,11 @@ function start() {
     let resources = ["brick", "brick", "brick", "brick", "wood", "wood", "wood", "wood", "livestock", "livestock","livestock","livestock", "ore", "ore", "ore", "ore", "wheat","wheat","wheat","wheat", "water", "water"];
     let numbers = [3, 4, 5, 6, 7, 8, 9, 10, 11, 3, 4, 5, 6, 7, 8, 9, 10, 11, 5, 6, 8, 10];
     for (let i = 1; i < 23; i++) { 
-
+    (function (i) {
+            setTimeout(function () {
+              console.log("hello");
+            
+         
         let resource = resources.splice(Math.floor(Math.random()*resources.length), 1);
         let number = numbers.splice(Math.floor(Math.random()*resources.length), 1);
         resource = resource.toString();
@@ -583,6 +898,7 @@ function start() {
               break;
           }
         element.innerHTML = board[tile].number;
+    }, 100*i);})(i);
     }
     nextTurn(playerTurn);
 }
@@ -603,7 +919,12 @@ class Player {
             console.log(board[house]);
             let element = document.getElementById(house);
             element.classList.add(this.color);
+            for(let i = 1; i < 63; i++){
+                let element = document.getElementById("house"+ i);
+                element.classList.remove("house-hover");
+            }
             element.classList.remove("hidden");
+  
         }
         let houseHandler = (event) => {
             let e = event.target.id;
@@ -617,12 +938,42 @@ class Player {
           }
         this.callAddHouse = function() {
             document.body.addEventListener("click",houseHandler);
-            // let i;
-            // // for(i = 1; i < 16; i++){
-            // //     let element = document.getElementById("house"+ i);
-            // //     element.classList.add("pulse");
-            // //     element.addEventListener("dblclick", playerOne.addHouse("house"+i));
-            // // }
+            for(let i = 1; i < 63; i++){
+                let element = document.getElementById("house"+ i);
+                element.classList.add("house-hover");
+            }
+        }
+        this.addRoad = function(road) {
+            console.log(this.brick)
+            road = road.toString();
+            console.log(road);
+            board[road].playerOwns = this.name;
+            console.log(board[road]);
+            let element = document.getElementById(road);
+            element.classList.add(this.color);
+            for(let i = 1; i < 63; i++){
+                let element = document.getElementById("road"+ i);
+                element.classList.remove("road-hover");
+            }
+            element.classList.remove("hidden");
+  
+        }
+        let roadHandler = (event) => {
+            let e = event.target.id;
+            let isroad = e.startsWith("road");
+            if (isroad) {
+            
+              console.log("Clicked", e);
+              this.addRoad(event.target.id)
+              document.body.removeEventListener("click",roadHandler)
+            }
+          }
+        this.callAddRoad = function() {
+            document.body.addEventListener("click",roadHandler);
+            for(let i = 1; i < 63; i++){
+                let element = document.getElementById("road"+ i);
+                element.classList.add("road-hover");
+            }
         }
         this.resourceRoll = function() {
             roll(1,6);

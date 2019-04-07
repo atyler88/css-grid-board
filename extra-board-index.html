@@ -13,28 +13,38 @@
 <body>
     <div class="menu card-panel white lighten-5">
         <div class="start-menu white lighten-3 white-text"id="start-menu">
-                <button class="btn Green lighten-2 start-button" onClick="start()">Start</button>
+                <button class="btn" onClick="start()">Start</button>
         </div>
         <div class="playerOne-menu orange lighten-3 white-text hide" id="playerOne-menu">
-            <div class="title orange lighten-3 white-text">Player One</div>
-            <div class="resource-card card red darken-1 white-text">Brick</div>
-            <div class="resource-card card green darken-1 white-text">Wood</div>
-            <div class="resource-card card yellow darken-1 white-text">Livestock</div>
-            <button class="p1-build btn orange lighten-2" onclick="playerOne.callAddHouse()">Place House</button>
-            <button class="btn red end-button" onclick="nextTurn(playerTurn)">End Turn</button>
-        </div>
-        <div class="playerOne-menu pink lighten-3 hide" id="playerTwo-menu">
-            <div class="title pink lighten-3 white-text">Player Two </div>
-            <div class="resource-card card red darken-1 white-text">Brick</div>
-            <div class="resource-card card green darken-1 white-text">Wood</div>
-            <div class="resource-card card yellow darken-1 white-text">Livestock</div>
+            <h3 class="title orange lighten-3 white-text">Player One</h3>
+                    <button class="p1-build btn orange lighten-2" onclick="playerOne.callAddHouse()">Place House</button>
+                    <button class="p1-build btn orange lighten-2" onclick="playerOne.callAddRoad()">Place Road</button>
+                    <ul>
+                        <li>Brick: </li>
+                        <li>Wood: </li>
+                        <li>Livestock: </li>
+                        <li>Ore: </li>
+                        <li>Wheat: </li>
+                    </ul>
+                    <button class="btn red" onclick="nextTurn(playerTurn)">End Turn</button>  
+            </div>
+        <div class="playerOne-menu pink lighten-3 white-text hide" id="playerTwo-menu">
+            <h3 class="title pink lighten-3 white-text">Player Two </h3>
             <button class="p2-build btn pink lighten-2" onclick="playerTwo.callAddHouse()">Place House</button>
-            <button class="btn red end-button" onclick="nextTurn(playerTurn)">End Turn</button>
+            <button class="p1-build btn pink lighten-2" onclick="playerTwo.callAddRoad()">Place Road</button>
+            <ul>
+                <li>Brick: </li>
+                <li>Wood: </li>
+                <li>Livestock: </li>
+                <li>Ore: </li>
+                <li>Wheat: </li>
+            </ul>
+            <button class="btn red" onclick="nextTurn(playerTurn)">End Turn</button>
         </div>
     </div>
     <div class="board card-panel amber lighten-4">
         <div class="corner-1"></div>
-        <div class="house1 house card-panel hidden lighten-2" id="house1" value="house1"></div>
+        <div class="house1 house card-panel hidden lighten-2 scale-transition" id="house1" value="house1"></div>
         <div class="house2 house card-panel hidden lighten-2" id="house2"></div>
         <div class="house3 house card-panel hidden lighten-2" id="house3"></div>
         <div class="house4 house card-panel hidden lighten-2" id="house4"></div>
@@ -118,32 +128,89 @@
         <div class="tile20 tile card-panel deep-purple lighten-2" id="tile20"></div>
         <div class="tile21 tile card-panel deep-purple lighten-2" id="tile21"></div>
         <div class="tile22 tile card-panel deep-purple lighten-2" id="tile22"></div>
-        <div class="tile23 tile card-panel deep-purple lighten-2" id="tile23"></div>
-        <div class="tile24 tile card-panel deep-purple lighten-2" id="tile24"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-        <div class="card-panel teal lighten-3"></div>
-
+        <div class="road1 road card-panel lighten-3 hidden" id="road1"></div>
+        <div class="road2 road card-panel lighten-3 hidden" id="road2"></div>
+        <div class="road3 road card-panel lighten-3 hidden" id="road3"></div>
+        <div class="road4 road card-panel lighten-3 hidden" id="road4"></div>
+        <div class="road5 road card-panel lighten-3 hidden" id="road5"></div>
+        <div class="road6 road card-panel lighten-3 hidden" id="road6"></div>
+        <div class="road7 road card-panel lighten-3 hidden" id="road7"></div>
+        <div class="road8 road card-panel lighten-3 hidden" id="road8"></div>
+        <div class="road9 road card-panel lighten-3 hidden" id="road9"></div>
+        <div class="road10 road card-panel lighten-3 hidden" id="road10"></div>
+        <div class="road11 road card-panel lighten-3 hidden" id="road11"></div>
+        <div class="road12 road card-panel lighten-3 hidden" id="road12"></div>
+        <div class="road13 road card-panel lighten-3 hidden" id="road13"></div>
+        <div class="road14 road card-panel lighten-3 hidden" id="road14"></div>
+        <div class="road15 road card-panel lighten-3 hidden" id="road15"></div>
+        <div class="road16 road card-panel lighten-3 hidden" id="road16"></div>
+        <div class="road17 road card-panel lighten-3 hidden" id="road17"></div>
+        <div class="road18 road card-panel lighten-3 hidden" id="road18"></div>
+        <div class="road19 road card-panel lighten-3 hidden" id="road19"></div>
+        <div class="road20 road card-panel lighten-3 hidden" id="road20"></div>
+        <div class="road21 road card-panel lighten-3 hidden" id="road21"></div>
+        <div class="road22 road card-panel lighten-3 hidden" id="road22"></div>
+        <div class="road23 road card-panel lighten-3 hidden" id="road23"></div>
+        <div class="road24 road card-panel lighten-3 hidden" id="road24"></div>
+        <div class="road25 road card-panel lighten-3 hidden" id="road25"></div>
+        <div class="road26 road card-panel lighten-3 hidden" id="road26"></div>
+        <div class="road27 road card-panel lighten-3 hidden" id="road27"></div>
+        <div class="road28 road card-panel lighten-3 hidden" id="road28"></div>
+        <div class="road29 road card-panel lighten-3 hidden" id="road29"></div>
+        <div class="road30 road card-panel lighten-3 hidden" id="road30"></div>
+        <div class="road31 road card-panel lighten-3 hidden" id="road31"></div>
+        <div class="road32 road card-panel lighten-3 hidden" id="road32"></div>
+        <div class="road33 road card-panel lighten-3 hidden" id="road33"></div>
+        <div class="road34 road card-panel lighten-3 hidden" id="road34"></div>
+        <div class="road35 road card-panel lighten-3 hidden" id="road35"></div>
+        <div class="road36 road card-panel lighten-3 hidden" id="road36"></div>
+        <div class="road37 road card-panel lighten-3 hidden" id="road37"></div>
+        <div class="road38 road card-panel lighten-3 hidden" id="road38"></div>
+        <div class="road39 road card-panel lighten-3 hidden" id="road39"></div>
+        <div class="road40 road card-panel lighten-3 hidden" id="road40"></div>
+        <div class="road41 road card-panel lighten-3 hidden" id="road41"></div>
+        <div class="road42 road card-panel lighten-3 hidden" id="road42"></div>
+        <div class="road43 road card-panel lighten-3 hidden" id="road43"></div>
+        <div class="road44 road card-panel lighten-3 hidden" id="road44"></div>
+        <div class="road45 road card-panel lighten-3 hidden" id="road45"></div>
+        <div class="road46 road card-panel lighten-3 hidden" id="road46"></div>
+        <div class="road47 road card-panel lighten-3 hidden" id="road47"></div>
+        <div class="road48 road card-panel lighten-3 hidden" id="road48"></div>
+        <div class="road49 road card-panel lighten-3 hidden" id="road49"></div>
+        <div class="road50 road card-panel lighten-3 hidden" id="road50"></div>
+        <div class="road51 road card-panel lighten-3 hidden" id="road51"></div>
+        <div class="road52 road card-panel lighten-3 hidden" id="road52"></div>
+        <div class="road53 road card-panel lighten-3 hidden" id="road53"></div>
+        <div class="road54 road card-panel lighten-3 hidden" id="road54"></div>
+        <div class="road55 road card-panel lighten-3 hidden" id="road55"></div>
+        <div class="road56 road card-panel lighten-3 hidden" id="road56"></div>
+        <div class="road57 road card-panel lighten-3 hidden" id="road57"></div>
+        <div class="road58 road card-panel lighten-3 hidden" id="road58"></div>
+        <div class="road59 road card-panel lighten-3 hidden" id="road59"></div>
+        <div class="road60 road card-panel lighten-3 hidden" id="road60"></div>
+        <div class="road61 road card-panel lighten-3 hidden" id="road61"></div>
+        <div class="road62 road card-panel lighten-3 hidden" id="road62"></div>
+        <div class="road63 road card-panel lighten-3 hidden" id="road63"></div>
+        <div class="road64 road card-panel lighten-3 hidden" id="road64"></div>
+        <div class="road65 road card-panel lighten-3 hidden" id="road65"></div>
+        <div class="road66 road card-panel lighten-3 hidden" id="road66"></div>
+        <div class="road67 road card-panel lighten-3 hidden" id="road67"></div>
+        <div class="road68 road card-panel lighten-3 hidden" id="road68"></div>
+        <div class="road69 road card-panel lighten-3 hidden" id="road69"></div>
+        <div class="road70 road card-panel lighten-3 hidden" id="road70"></div>
+        <div class="road71 road card-panel lighten-3 hidden" id="road71"></div>
+        <div class="road72 road card-panel lighten-3 hidden" id="road72"></div>
+        <div class="road73 road card-panel lighten-3 hidden" id="road73"></div>
+        <div class="road74 road card-panel lighten-3 hidden" id="road74"></div>
+        <div class="road75 road card-panel lighten-3 hidden" id="road75"></div>
+        <div class="road76 road card-panel lighten-3 hidden" id="road76"></div>
+        <div class="road77 road card-panel lighten-3 hidden" id="road77"></div>
+        <div class="road78 road card-panel lighten-3 hidden" id="road78"></div>
+        <div class="road79 road card-panel lighten-3 hidden" id="road79"></div>
+        <div class="road80 road card-panel lighten-3 hidden" id="road80"></div>
+        <div class="road81 road card-panel lighten-3 hidden" id="road81"></div>
+        <div class="road82 road card-panel lighten-3 hidden" id="road82"></div>
+        <div class="road83 road card-panel lighten-3 hidden" id="road83"></div>
     </div>
 </body>
 </html>
